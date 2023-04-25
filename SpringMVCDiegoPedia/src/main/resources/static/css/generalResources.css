@@ -1,0 +1,41 @@
+#myBtnToTop {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 99;
+	border: none;
+	outline: none;
+	background-color: #01E1FB;
+	color: white;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 4px;
+	font-size: 6vh;
+	border-radius:50%;
+}
+
+#myBtnToTop:hover {
+	background-color: #555;
+}
+
+#myBtnToBot {
+	display: none;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+	z-index: 99;
+	border: none;
+	outline: none;
+	background-color: #01E1FB;
+	color: white;
+	cursor: pointer;
+	padding: 5px;
+	border-radius: 4px;
+	font-size: 6vh;
+	border-radius:50%;
+}
+
+#myBtnToBot:hover {
+	background-color: #555;
+}

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Controlador Relación Científicos - Contribuciones</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" th:href="@{/css/generalResources.css}">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script defer th:src="@{/js/recursosBtnClearAdicional.js}"></script>
+<script defer th:src="@{/js/recursosConsultasPersonalizadas.js}"></script>
+<script defer th:src="@{/js/generalResources.js}"></script>
+</head>
+<body class="container">
+	<button id="myBtnToTop" title="Go to top">
+		<i id="iconToTop" class="bi bi-arrow-up-circle-fill"></i>
+	</button>
+	<button id="myBtnToBot" title="Go to Bot">
+		<i id="iconToBot" class="bi bi-arrow-down-circle-fill"></i>
+	</button>
+	<div th:replace="fragments/headerRelacion::header"></div>
+	<h1 class="m-2 p-3 d-flex justify-content-center">[[${tituloBusqueda}]]</h1>
+	<div class="my-3">
+		<form th:if="${tipoDeConsultas==null}"
+			th:action="@{/relacionesCientificoContribucion/consultas}">
+			<input type="hidden" name="tipoDeConsultas" id="tipoDeConsultas"
+				value="consultasPorCampoPropioRelacionadas">
+			<button type="submit" class="btn btn-primary btn-lg btn-block"
+				style="height: 100px; display: flex; justify-content: center; align-items: center;">Realizar
+				consultas por campo propio ya relacionadas (no aparecerán no
+				relacionadas)</button>
+		</form>
+		<form th:if="${tipoDeConsultas==null}"
+			th:action="@{/relacionesCientificoContribucion/consultas}">
+			<input type="hidden" name="tipoDeConsultas" id="tipoDeConsultas"
+				value="consultasPorCampoAjeno">
+			<button type="submit" class="btn btn-secondary btn-lg btn-block mt-2"
+				style="height: 100px; display: flex; justify-content: center; align-items: center;">Realizar
+				consultas por campo ajeno</button>
+		</form>
+		<form
+			th:if="${tipoDeConsultas=='consultasPorCampoPropioRelacionadas'}"
+			th:action="@{/relacionesCientificoContribucion/consultas}">
+			<div class="d-flex justify-content-between">
+				<input type="hidden" name="tipoDeConsultas" id="tipoDeConsultas"
+					value="consultasPorCampoPropioRelacionadas"> <select
+					name="tipoDeRegistrosObtenidos" id="tipoDeRegistrosObtenidos"
+					class="mx-2 px-2 form-control">
+					<option value="cientificos"
+						th:selected="${tablaBusquedaSeleccionada}=='cientificos'">Científicos</option>
+					<option value="contribuciones"
+						th:selected="${tablaBusquedaSeleccionada}=='contribuciones'">Contribuciones</option>
+				</select> <input type="search" id="campoBuscar" name="campoBuscar"
+					class="mr-2 px-2 form-control" placeholder="Buscar..."
+					th:value="${campoBuscar}" required> <select
+					name="tipoComparadorCampos" id="tipoComparadorCampos"
+					class="mx-2 px-2 form-control">
+				</select> <input type="submit" value="Buscar" id="botonBusqueda"
+					class="mx-2 px-2 btn btn-info">
+				<button id="btnClear" class="ml-2 px-2 btn btn-info">Limpiar</button>
+			</div>
+		</form>
+		<form th:if="${tipoDeConsultas=='consultasPorCampoAjeno'}"
+			th:action="@{/relacionesCientificoContribucion/consultas}">
+			<div class="d-flex justify-content-between">
+				<input type="hidden" name="tipoDeConsultas" id="tipoDeConsultas"
+					value="consultasPorCampoAjeno"> <select
+					name="tipoDeRegistrosObtenidos" id="tipoDeRegistrosObtenidos"
+					class="mx-2 px-2 form-control">
+					<option value="contribuciones"
+						th:selected="${tablaBusquedaSeleccionada}=='contribuciones'">Científicos</option>
+					<option value="cientificos"
+						th:selected="${tablaBusquedaSeleccionada}=='cientificos'">Contribuciones</option>
+				</select> <input type="search" id="campoBuscar" name="campoBuscar"
+					class="mr-2 px-2 form-control" placeholder="Buscar..."
+					th:value="${campoBuscar}" required> <select
+					name="tipoComparadorCampos" id="tipoComparadorCampos"
+					class="mx-2 px-2 form-control">
+				</select> <input type="submit" value="Buscar" id="botonBusqueda"
+					class="mx-2 px-2 btn btn-info">
+				<button id="btnClear" class="ml-2 px-2 btn btn-info">Limpiar</button>
+			</div>
+		</form>
+	</div>
+	<div id="mensajeInfo"
+		class="alert alert-primary alert-dismissible fade show text-center message"
+		role="alert">
+
+		<button type="button" class="close btn-sm" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">x</span>
+		</button>
+	</div>
+	<div class="my p-3">
+		<form th:if="${tipoDeConsultas!=null}"
+			th:action="@{/relacionesCientificoContribucion/consultas}">
+			<div class="d-flex justify-content-between">
+				<input type="hidden" name="tipoDeConsultas" id="tipoDeConsultas"
+					value="regresar"> <input type="submit" value="Regresar"
+					class="btn btn-light border border-danger btn-lg btn-block"
+					style="height: 100px; display: flex; justify-content: center; align-items: center;">
+			</div>
+		</form>
+
+	</div>
+	<div th:if="${message!=null}"
+		class="alert alert-success alert-dismissible fade show text-center message"
+		role="alert">
+		[[${message}]]
+		<button type="button" class="close btn-sm" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">x</span>
+		</button>
+	</div>
+	<div
+		th:if="${contribucionesRelacionadas!=null&&contribucionesRelacionadas.size()>0}">
+		<table class="table table-hover table-responsive-xl">
+			<thead class="thead-light">
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Campo</th>
+					<th scope="col">Rama</th>
+					<th scope="col">Enlace para más información</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="contribucionRelacionada: ${contribucionesRelacionadas}">
+					<td>[[${contribucionRelacionada.id}]]</td>
+					<td>[[${contribucionRelacionada.nombre}]]</td>
+					<td>[[${contribucionRelacionada.campo}]]</td>
+					<td>[[${contribucionRelacionada.rama}]]</td>
+					<td><a
+						th:href="${contribucionRelacionada.enlaceMasInformacion}">Enlace
+							para más información</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div
+		th:if="${cientificosRelacionados!=null&&cientificosRelacionados.size()>0}">
+		<table class="table table-hover table-responsive-xl">
+			<thead class="thead-light">
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellidos</th>
+					<th scope="col">Nacionalidad</th>
+					<th scope="col">Fecha de nacimiento</th>
+					<th scope="col">Fecha de defunción</th>
+					<th scope="col">Enlace para más información</th>
+					<th scope="col">Enlace de foto</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="cientificoRelacionado: ${cientificosRelacionados}">
+					<td>[[${cientificoRelacionado.id}]]</td>
+					<td>[[${cientificoRelacionado.nombre}]]</td>
+					<td>[[${cientificoRelacionado.apellidos}]]</td>
+					<td>[[${cientificoRelacionado.nacionalidad}]]</td>
+					<td>[[${cientificoRelacionado.fechaNacimiento}]]</td>
+					<td th:if="${cientificoRelacionado.getFechaDefuncion()!=null}">[[${cientificoRelacionado.fechaDefuncion}]]</td>
+					<td th:if="${cientificoRelacionado.getFechaDefuncion()==null}">Vivo</td>
+
+					<td><a th:href="${cientificoRelacionado.enlaceMasInformacion}">Enlace
+							para más información</a></td>
+					<td><img th:src="${cientificoRelacionado.enlaceFoto}"
+						height="45px" width="35"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div th:replace="fragments/footer::footer"></div>
+</body>
+</html>

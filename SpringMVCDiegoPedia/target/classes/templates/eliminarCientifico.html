@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Controlador Científicos</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" th:href="@{/css/generalResources.css}">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script defer th:src="@{/js/generalResources.js}"></script>
+</head>
+<body class="container">
+	<button id="myBtnToTop" title="Go to top">
+		<i id="iconToTop" class="bi bi-arrow-up-circle-fill"></i>
+	</button>
+	<button id="myBtnToBot" title="Go to Bot">
+		<i id="iconToBot" class="bi bi-arrow-down-circle-fill"></i>
+	</button>
+	<div th:replace="fragments/headerCientifico::header"></div>
+	<h1 class="m-2 p-3 d-flex justify-content-center">Eliminar
+		científico</h1>
+	<form th:action="@{'/cientificos/delete/'+${cientifico.id}}"
+		method="get" th:o enctype="multiport/form-data"
+		style="max-width: 550px; margin: 0 auto">
+		<div>
+			<p>Se va a eliminar el científico con los siguientes atributos:</p>
+			<p>Id="[[${cientifico.id}]]".</p>
+			<p>Nombre="[[${cientifico.nombre}]]".</p>
+			<p>Apellidos="[[${cientifico.apellidos}]]".</p>
+			<p>Nacionalidad="[[${cientifico.nacionalidad}]]".</p>
+			<p>Fecha de Nacimiento="[[${cientifico.fechaNacimiento}]]".</p>
+			<p>Fecha de defunción="[[${cientifico.fechaDefuncion}]]".</p>
+			<p>Enlace para más
+				información="[[${cientifico.enlaceMasInformacion}]]".</p>
+			<p>Enlace de foto="[[${cientifico.enlaceFoto}]]".</p>
+			<p>¿Desea eliminar?</p>
+			<div class="d-flex justify-content-between">
+				<input type="submit" value="Eliminar"
+					class="btn btn-primary btn-sm mr-2"> <a
+					th:href="@{/cientificos}" class="btn btn-primary btn-sm mr-2">Cancelar</a>
+			</div>
+		</div>
+	</form>
+	<div th:replace="fragments/footer::footer"></div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Controlador Científicos</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" th:href="@{/css/generalResources.css}">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script defer th:src="@{/js/recursosBtnClear.js}"></script>
+<script defer th:src="@{/js/generalResources.js}"></script>
+</head>
+<body class="container">
+	<button id="myBtnToTop" title="Go to top">
+		<i id="iconToTop" class="bi bi-arrow-up-circle-fill"></i>
+	</button>
+	<button id="myBtnToBot" title="Go to Bot">
+		<i id="iconToBot" class="bi bi-arrow-down-circle-fill"></i>
+	</button>
+	<div th:replace="fragments/headerCientifico::header"></div>
+	<h1 class="m-2 p-3 d-flex justify-content-center">Lista de
+		Científicos</h1>
+	<div class="my-3">
+		<form th:action="@{/cientificos}">
+			<div class="d-flex justify-content-between">
+				<input type="search" id="campoBuscar" name="campoBuscar"
+					class="mr-2 px-2 form-control" placeholder="Buscar..."
+					th:value="${campoBuscar}"> <select name="tipoComparador"
+					id="tipoComparador" class="mx-2 px-2 form-control">
+					<option value="nombre"
+						th:selected="${parametroBusquedaSeleccionado}=='nombre'">Nombre</option>
+					<option value="apellidos"
+						th:selected="${parametroBusquedaSeleccionado}=='apellidos'">Apellidos</option>
+					<option value="nacionalidad"
+						th:selected="${parametroBusquedaSeleccionado}=='nacionalidad'">Nacionalidad</option>
+					<option value="fechaNacimiento"
+						th:selected="${parametroBusquedaSeleccionado}=='fechaNacimiento'">Fecha
+						de Nacimiento</option>
+					<option value="fechaDefuncion"
+						th:selected="${parametroBusquedaSeleccionado}=='fechaDefuncion'">Fecha
+						de defunción</option>
+					<option value="enlaceMasInformacion"
+						th:selected="${parametroBusquedaSeleccionado}=='enlaceMasInformacion'">Enlace
+						para más información</option>
+					<option value="enlaceFoto"
+						th:selected="${parametroBusquedaSeleccionado}=='enlaceFoto'">Enlace
+						de foto</option>
+				</select> <input type="submit" value="Buscar" class="mx-2 px-2 btn btn-info">
+				<button id="btnClear" class="ml-2 px-2 btn btn-info">Limpiar</button>
+			</div>
+		</form>
+	</div>
+	<div th:if="${message!=null}"
+		class="alert alert-success alert-dismissible fade show text-center message"
+		role="alert">
+		[[${message}]]
+		<button type="button" class="close btn-sm" data-dismiss="alert"
+			aria-label="Close">
+			<span aria-hidden="true">x</span>
+		</button>
+	</div>
+	<div th:if="${cientificos.size()>0}">
+		<table class="table table-hover table-responsive-xl">
+			<thead class="thead-light">
+				<tr>
+					<th scope="col">ID</th>
+					<th scope="col">Nombre</th>
+					<th scope="col">Apellidos</th>
+					<th scope="col">Nacionalidad</th>
+					<th scope="col">Fecha de Nacimiento</th>
+					<th scope="col">Fecha de Defunción</th>
+					<th scope="col">URL para más información</th>
+					<th scope="col">URL foto</th>
+					<th scope="col">Acciones</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="cientifico: ${cientificos}">
+					<td>[[${cientifico.id}]]</td>
+					<td>[[${cientifico.nombre}]]</td>
+					<td>[[${cientifico.apellidos}]]</td>
+					<td>[[${cientifico.nacionalidad}]]</td>
+					<td>[[${cientifico.fechaNacimiento}]]</td>
+					<td th:if="${cientifico.getFechaDefuncion()!=null}">[[${cientifico.fechaDefuncion}]]</td>
+					<td th:if="${cientifico.getFechaDefuncion()==null}">Vivo</td>
+					<td><a th:href="${cientifico.enlaceMasInformacion}">Enlace
+							para más información</a></td>
+					<td><img th:src="${cientifico.enlaceFoto}" height="45px"
+						width="35"></td>
+					<td><a th:href="@{'/cientificos/'+ ${cientifico.id}}"
+						title="Editar científico"
+						class="fa-regular fa-pen-to-square icon-dark"></a> <a
+						th:href="@{'/cientificos/goToDelete/'+ ${cientifico.id}}"
+						th:cientificoTitle="${cientificoNombre}" id="btnDelete"
+						title="Borrar científico"
+						class="fa-regular fa-trash-can icon-dark btn-delete"></a></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div th:replace="fragments/footer::footer"></div>
+</body>
+</html>

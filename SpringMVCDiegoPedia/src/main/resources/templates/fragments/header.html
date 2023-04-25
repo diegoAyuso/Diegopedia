@@ -1,0 +1,32 @@
+<head>
+<meta charset="utf-8">
+</head>
+<header th:fragment="header">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<a class="navbar-brand" th:href="@{/diegopedia}"> Inicio </a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse"
+			data-target="#topNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="topNavbar">
+			<ul class="navbar-nav">
+				<li class="align-self-center nav-item"><a class="nav-link"
+					th:href="@{/cientificos}">Científicos</a></li>
+				<li class="align-self-center nav-item"><a class="nav-link"
+					th:href="@{/cientificos/new}">Nuevo científico</a></li>
+				<li class="align-self-center nav-item"><a class="nav-link"
+					th:href="@{/contribuciones}">Contribuciones</a></li>
+				<li class="align-self-center nav-item"><a class="nav-link"
+					th:href="@{/contribuciones/new}">Nueva contribución</a></li>
+				<li class="align-self-center nav-item"><a class="nav-link"
+					th:href="@{/relacionesCientificoContribucion}">Relaciones entre
+						contribuciones y científicos</a></li>
+				<li class="align-self-center nav-item"><a class="nav-link"
+					th:href="@{/relacionesCientificoContribucion/new}">Nueva
+						relación contribución-científico</a></li>
+				<li class="align-self-center nav-item"><a class="nav-link"
+					th:href="@{/usuarios}">Usuarios</a></li>
+			</ul>
+		</div>
+	</nav>
+</header>

@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Controlador Relación Científicos - Contribuciones</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" th:href="@{/css/generalResources.css}">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script defer th:src="@{/js/generalResources.js}"></script>
+</head>
+<body class="container">
+	<button id="myBtnToTop" title="Go to top">
+		<i id="iconToTop" class="bi bi-arrow-up-circle-fill"></i>
+	</button>
+	<button id="myBtnToBot" title="Go to Bot">
+		<i id="iconToBot" class="bi bi-arrow-down-circle-fill"></i>
+	</button>
+	<div th:replace="fragments/headerRelacion::header"></div>
+	<h1 class="m-2 p-3 d-flex justify-content-center">[[${pageTitle}]]</h1>
+	<form th:action="@{/relacionesCientificoContribucion/save}"
+		method="post" enctype="multiport/form-data"
+		th:object="${relacionCientificoContribucion}"
+		style="max-width: 550px; margin: 0 auto">
+		<input type="hidden" th:field="*{id}">
+		<div class="p-3">
+			<div class="form-group row">
+				<label for="nombre" class="col-sm-3 col-form-label">Nombre
+					de contribución:</label>
+				<div class="col-sm-9">
+					<select name="nombreContribucion" id="nombreContribucion"
+						class="mx-2 px-2 form-control" th:field="*{contribucion}" required>
+						<option th:each="contribucion: ${contribuciones}"
+							th:value="${contribucion.id}" th:text="${contribucion.nombre}"></option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="p-3">
+			<div class="form-group row">
+				<label for="nombre" class="col-sm-3 col-form-label">Apellido
+					del científico:</label>
+				<div class="col-sm-9">
+					<select name="apellidosCientifico" id="apellidosCientifico"
+						class="mx-2 px-2 form-control" th:field="*{cientifico}" required>
+						<option th:each="cientifico: ${cientificos}"
+							th:value="${cientifico.id}" th:text="${cientifico.apellidos}"></option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="p-3">
+			<div class="form-group row">
+				<label for="epoca" class="col-sm-3 col-form-label">Época:</label>
+				<div class="col-sm-9">
+					<input type="text" id="epoca" name="epoca" th:field="*{epoca}"
+						class="mx-2 px-2 form-control" pattern="^[0-9]{4}$"
+						placeholder="Época"
+						title="Admite un año de, exactamente, 4 dígitos entre el 0 y el 9."
+						required>
+				</div>
+			</div>
+		</div>
+		<div class="p-3">
+			<div class="form-group row">
+				<label for="aportacion" class="col-sm-3 col-form-label">Aportación:</label>
+				<div class="col-sm-9">
+					<input list="aportaciones" id="aportacion" name="aportacion"
+						th:field="*{aportacion}" class="mx-2 px-2 form-control"
+						max-length="60"
+						pattern="^[a-zA-Z\\s\\-ÁÉÍÓÚáéíóúÀÈÌÒÙàèìòÄËÏÖÜäëïöüÂÊÎÔÛâêîôûÑñ]+$"
+						placeholder="Campo"
+						title="Este campo es de tipo alfabético. Admite guiones, espacio y las vocales con las tildes `,',¨, ^. No admite números u otro tipo de carácter."
+						required>
+					<datalist id="aportaciones">
+						<option th:each="aportacion: ${aportaciones}"
+							th:value="${aportacion}">
+					</datalist>
+				</div>
+			</div>
+		</div>
+		<div class="d-flex justify-content-between">
+			<input type="submit" th:value="${buttonEdit}"
+				class="btn btn-primary btn-sm mr-2"> <a
+				th:href="@{/relacionesCientificoContribucion}"
+				class="btn btn-primary btn-sm mr-2">Cancelar</a>
+		</div>
+	</form>
+
+	<div th:replace="fragments/footer::footer"></div>
+</body>
+</html>

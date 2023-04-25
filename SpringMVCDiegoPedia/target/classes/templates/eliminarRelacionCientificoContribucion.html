@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Controlador Contribuciones</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<link rel="stylesheet" th:href="@{/css/generalResources.css}">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script defer th:src="@{/js/generalResources.js}"></script>
+</head>
+<body class="container">
+	<button id="myBtnToTop" title="Go to top">
+		<i id="iconToTop" class="bi bi-arrow-up-circle-fill"></i>
+	</button>
+	<button id="myBtnToBot" title="Go to Bot">
+		<i id="iconToBot" class="bi bi-arrow-down-circle-fill"></i>
+	</button>
+	<div th:replace="fragments/headerContribucion::header"></div>
+	<h1 class="m-2 p-3 d-flex justify-content-center">Eliminar
+		relación científico - contribución</h1>
+	<form
+		th:action="@{'/relacionesCientificoContribucion/delete/'+${relacionCientificoContribucion.id}}"
+		method="get" enctype="multiport/form-data"
+		style="max-width: 550px; margin: 0 auto">
+		<p>Se va a eliminar la relación con
+		<p>Id= "[[${relacionCientificoContribucion.id}]]".</p>
+		<p>Contribución:</p>
+		<p class="m-3 p-3">Id:
+			"[[${relacionCientificoContribucion.contribucion.id}]]".</p>
+		<p class="m-3 p-3">Nombre:
+			"[[${relacionCientificoContribucion.contribucion.nombre}]]".</p>
+		<p class="m-3 p-3">Campo:
+			"[[${relacionCientificoContribucion.contribucion.campo}]]".</p>
+		<p class="m-3 p-3">Rama:
+			"[[${relacionCientificoContribucion.contribucion.rama}]]".</p>
+		<p class="m-3 p-3">URL para más información:
+			"[[${relacionCientificoContribucion.contribucion.enlaceMasInformacion}]]".</p>
+		<p>Cientifico:</p>
+		<p class="m-3 p-3">Id:
+			"[[${relacionCientificoContribucion.cientifico.id}]]".</p>
+		<p class="m-3 p-3">Nombre:
+			"[[${relacionCientificoContribucion.cientifico.nombre}]]".</p>
+		<p class="m-3 p-3">Apellidos:
+			"[[${relacionCientificoContribucion.cientifico.apellidos}]]".</p>
+		<p class="m-3 p-3">Nacionalidad:
+			"[[${relacionCientificoContribucion.cientifico.nacionalidad}]]".</p>
+		<p class="m-3 p-3">Fecha de nacimiento:
+			"[[${relacionCientificoContribucion.cientifico.fechaNacimiento}]]".</p>
+		<p class="m-3 p-3">Fecha de defunción:
+			"[[${relacionCientificoContribucion.cientifico.fechaDefuncion}]]".</p>
+		<p class="m-3 p-3">URL foto:
+			"[[${relacionCientificoContribucion.cientifico.enlaceFoto}]]".</p>
+		<p class="m-3 p-3">URL para más información:
+			"[[${relacionCientificoContribucion.cientifico.enlaceMasInformacion}]]".</p>
+		<p>Época= "[[${relacionCientificoContribucion.epoca}]]".</p>
+		<p>Aportación= "[[${relacionCientificoContribucion.aportacion}]]".</p>
+		<div class="d-flex justify-content-between">
+			<input type="submit" value="Eliminar"
+				class="btn btn-primary btn-sm mr-2"><a
+				th:href="@{/relacionesCientificoContribucion}"
+				class="btn btn-primary btn-sm mr-2">Cancelar</a>
+		</div>
+	</form>
+	<div th:replace="fragments/footer::footer"></div>
+</body>
+</html>
