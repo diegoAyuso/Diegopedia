@@ -1,0 +1,51 @@
+#mostrarP {
+    text-decoration: none;
+    font-size: 3vh;
+    position: relative !important;
+    top: -35px !important;
+    left: -9px !important;
+    color: black;
+}
+
+#iconoP:hover {
+    color: black;
+}
+
+#derechaLogin {
+    background: radial-gradient(rgb(211, 207, 207), rgb(23, 22, 22));
+    border-radius: 2%;
+    position: relative;
+    left: -15px;
+}
+
+form a {
+    color: white !important;
+}
+
+#mostrarP,
+#mostrarPR {
+    text-decoration: none;
+    font-size: 3vh;
+    position: relative !important;
+    top: -40px !important;
+    left: -9px !important;
+}
+
+#iconoP,
+#iconoPR {
+    color: black;
+}
+
+#iconoP:hover,
+#iconoPR:hover {
+    color: black;
+}
+
+#terminos {
+    position: relative !important;
+    margin-right: 4px;
+}
+
+u {
+    color: black;
+}

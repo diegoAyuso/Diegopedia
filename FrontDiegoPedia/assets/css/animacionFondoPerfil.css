@@ -1,0 +1,43 @@
+#sectionCambiarCredenciales {
+    -webkit-animation: changeBack 30s infinite !important;
+    animation: changeBack 30s infinite !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sectionCientificosFavoritos {
+    -webkit-animation: changeBack 30s infinite !important;
+    animation: changeBack 30s infinite !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sectionContribucionesFavoritas {
+    -webkit-animation: changeBack 30s infinite !important;
+    animation: changeBack 30s infinite !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sectionMasOpciones {
+    -webkit-animation: changeBack 30s infinite !important;
+    animation: changeBack 30s infinite !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#sectionEliminarCuenta {
+    -webkit-animation: changeBack 30s infinite !important;
+    animation: changeBack 30s infinite !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#sectionEliminarCuenta,#sectionMasOpciones,#sectionContribucionesFavoritas,#sectionCientificosFavoritos,#sectionCambiarCredenciales {
+    background: url(data:../ims/carouselInicio3.png) no-repeat -9999px -9999px
+     url("../ims/carouselValores1.jpg") no-repeat -9999px -9999px
+     url("../ims/carouselValores0.jpg") no-repeat -9999px -9999px
+     url("../ims/carouselValores2.jpg") no-repeat -9999px -9999px
+     url("../ims/carouselValores3.jpg") no-repeat -9999px -9999px
+     url("../ims/contribucionesAstrofisica.jpg") no-repeat -9999px -9999px
+     url("../ims/contribucionesCaos.jpg") no-repeat -9999px -9999px;
+  }

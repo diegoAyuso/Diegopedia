@@ -1,0 +1,30 @@
+/*Cargamos las fuentes de google font descargadas.*/
+@font-face {
+    font-family: "Dosis Regular";
+    src: url(../typos/Dosis-Regular.ttf);
+    font-family: "JosefinSans Regular";
+    src: url(../typos/JosefinSans-Regular.ttf);
+    font-family: "JosefinSans Bold";
+    src: url(../typos/JosefinSans-Bold.ttf);
+    font-family: "Raleway Regular";
+    src: url(../typos/Raleway-Regular.ttf);
+    font-family: "Raleway Extrabold";
+    src: url(../typos/Raleway-ExtraBold.ttf);
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Dosis Regular', 'JosefinSans Regular', sans-serif;
+}
+
+ul li::marker {
+    font-size: 1vw;
+}
+
+@media screen and (max-width:500px) {
+    ul li::marker {
+        font-size: 4vh;
+    }
+}

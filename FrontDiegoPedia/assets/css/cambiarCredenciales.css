@@ -1,0 +1,32 @@
+form a {
+    color: white !important;
+}
+
+#mostrarP,
+#mostrarPR,
+#mostrarOP,
+#mostrarPE {
+    text-decoration: none;
+    font-size: 3vh;
+    position: relative !important;
+    top: -40px !important;
+    left: -9px !important;
+}
+
+#iconoP,
+#iconoPR,
+#iconoOP,
+#iconoPE {
+    color: black;
+}
+
+#iconoP:hover,
+#iconoPR:hover,
+#iconoOP:hover,
+#iconoPE:hover {
+    color: black;
+}
+
+u {
+    color: black;
+}
