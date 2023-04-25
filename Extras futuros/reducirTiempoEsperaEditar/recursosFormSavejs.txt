@@ -1,0 +1,20 @@
+window.addEventListener('load', () => {
+	console.log("Hola");
+	  console.log("valor de nombre contribucion input: "+document.getElementById("recursoNombreContribucion").value);
+	  console.log("valor de nombre contribucion select: "+document.getElementById("nombreContribucion").value);
+	  console.log("valor de apellidos cientifico input: "+document.getElementById("recursoApellidosCientifico").value);
+	  console.log("valor de apellidos cientifico select: "+document.getElementById("apellidosCientifico").value);
+	document.getElementById("recursoNombreContribucion").value=document.getElementById("nombreContribucion").value;
+	document.getElementById("recursoApellidosCientifico").value=document.getElementById("apellidosCientifico").value;
+  document.getElementById("nombreContribucion").addEventListener("change", function() {
+	  document.getElementById("recursoNombreContribucion").value=document.getElementById("nombreContribucion").value;
+	  console.log("valor de nombre contribucion input: "+document.getElementById("recursoNombreContribucion").value);
+	  console.log("valor de nombre contribucion select: "+document.getElementById("nombreContribucion").value);
+});
+ document.getElementById("apellidosCientifico").addEventListener("change", function() {
+	  document.getElementById("recursoApellidosCientifico").value=document.getElementById("apellidosCientifico").value;
+	  console.log("valor de apellidos cientifico input: "+document.getElementById("recursoApellidosCientifico").value);
+	  console.log("valor de apellidos cientifico select: "+document.getElementById("apellidosCientifico").value);
+});
+
+});

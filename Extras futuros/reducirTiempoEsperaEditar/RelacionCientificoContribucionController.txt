@@ -1,0 +1,257 @@
+package com.diego.SpringMVCDiegoPedia.Controllers;
+
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
+import com.diego.SpringMVCDiegoPedia.Models.Cientifico;
+import com.diego.SpringMVCDiegoPedia.Models.Contribucion;
+import com.diego.SpringMVCDiegoPedia.Models.RelacionCientificosContribuciones;
+import com.diego.SpringMVCDiegoPedia.Repositories.CientificoRepository;
+import com.diego.SpringMVCDiegoPedia.Repositories.ContribucionRepository;
+import com.diego.SpringMVCDiegoPedia.Repositories.RelacionCientificosContribucionesRepository;
+
+@Controller
+public class RelacionCientificoContribucionController {
+	@Autowired
+	ContribucionRepository contribucionRepository;
+	@Autowired
+	CientificoRepository cientificoRepository;
+	@Autowired
+	RelacionCientificosContribucionesRepository relacionRepository;
+
+	@GetMapping("/relacionesCientificoContribucion")
+	public String getAll(Model model, @Param("campoBuscar") String campoBuscar,
+			@Param("tipoComparador") String tipoComparador) {
+		try {
+			List<RelacionCientificosContribuciones> relacionesCientificoContribucion = new ArrayList<RelacionCientificosContribuciones>();
+			if (campoBuscar == null) {
+				relacionRepository.findAll().forEach(relacionesCientificoContribucion::add);
+			} else if (tipoComparador.equals("nombreContribucion")) {
+				contribucionRepository.findByNombreContaining(campoBuscar).forEach(
+						e -> relacionRepository.findByContribucion(e).forEach(relacionesCientificoContribucion::add));
+				model.addAttribute("campoBuscar", campoBuscar);
+				model.addAttribute("parametroBusquedaSeleccionado", "nombreContribucion");
+
+			} else if (tipoComparador.equals("apellidosCientifico")) {
+				cientificoRepository.findByApellidosContaining(campoBuscar).forEach(
+						e -> relacionRepository.findByCientifico(e).forEach(relacionesCientificoContribucion::add));
+				model.addAttribute("campoBuscar", campoBuscar);
+				model.addAttribute("parametroBusquedaSeleccionado", "apellidosCientifico");
+
+			} else if (tipoComparador.equals("epoca")) {
+				relacionRepository.findByEpocaContaining(campoBuscar).forEach(relacionesCientificoContribucion::add);
+				model.addAttribute("campoBuscar", campoBuscar);
+				model.addAttribute("parametroBusquedaSeleccionado", "epoca");
+			} else if (tipoComparador.equals("aportacion")) {
+				relacionRepository.findByAportacionContaining(campoBuscar)
+						.forEach(relacionesCientificoContribucion::add);
+				model.addAttribute("campoBuscar", campoBuscar);
+				model.addAttribute("parametroBusquedaSeleccionado", "aportacion");
+			}
+			// Dado que ordena por fkContribución por defecto, nos aseguremos que lo ordene
+			// por su Id
+			relacionesCientificoContribucion.sort(Comparator.comparing(RelacionCientificosContribuciones::getId));
+			model.addAttribute("relacionesCientificoContribucion", relacionesCientificoContribucion);
+		} catch (Exception e) {
+			model.addAttribute("message", e.getMessage());
+		}
+		return "relacionesCientificoContribucion";
+	}
+
+	@GetMapping("/relacionesCientificoContribucion/new")
+	public String add(Model model) {
+		RelacionCientificosContribuciones relacionCientificoContribucion = new RelacionCientificosContribuciones();
+		model.addAttribute("buttonEdit", "Añadir relación");
+		model.addAttribute("relacionCientificoContribucion", relacionCientificoContribucion);
+		List<Cientifico> cientificosOrdenados=cientificoRepository.findAll();
+		cientificosOrdenados.sort(Comparator.comparing(Cientifico::getApellidos));
+		List<Contribucion> contribucionesOrdenadas=contribucionRepository.findAll();
+		contribucionesOrdenadas.sort(Comparator.comparing(Contribucion::getNombre));
+		model.addAttribute("contribucionReferida",
+				relacionCientificoContribucion.getContribucion());
+		model.addAttribute("cientificoReferido",
+				relacionCientificoContribucion.getCientifico());
+		model.addAttribute("cientificos", cientificosOrdenados);
+		model.addAttribute("contribuciones", contribucionesOrdenadas);
+		return "guardarCientificoContribucion";
+	}
+
+	@PostMapping("/relacionesCientificoContribucion/save")
+	public String guardar(RelacionCientificosContribuciones relacion, RedirectAttributes redirectAttributes) {
+		try {
+			System.out.println(relacion);
+			relacionRepository.save(relacion);
+			redirectAttributes.addFlashAttribute("message", "Relacion guardada");
+		} catch (Exception e) {
+			redirectAttributes.addFlashAttribute("message", e.getMessage());
+		}
+		return "guardarCientificoContribucion";
+	}
+
+	@GetMapping("/relacionesCientificoContribucion/{id}")
+	public String edit(@PathVariable("id") int id, Model model, RedirectAttributes redirectAttributes) {
+		try {
+			RelacionCientificosContribuciones relacionCientificoContribucion = relacionRepository.findById(id).get();
+			model.addAttribute("contribucionReferida",
+					relacionCientificoContribucion.getContribucion());
+			model.addAttribute("cientificoReferido",
+					relacionCientificoContribucion.getCientifico());
+			List<Cientifico> cientificosOrdenados=cientificoRepository.findAll();
+			cientificosOrdenados.sort(Comparator.comparing(Cientifico::getApellidos));
+			List<Contribucion> contribucionesOrdenadas=contribucionRepository.findAll();
+			contribucionesOrdenadas.sort(Comparator.comparing(Contribucion::getNombre));
+			model.addAttribute("cientificos", cientificosOrdenados);
+			model.addAttribute("contribuciones", contribucionesOrdenadas);
+			model.addAttribute("relacionCientificoContribucion", relacionCientificoContribucion);
+			model.addAttribute("pageTitle", "Editar Relacion (ID: " + id + ")");
+			model.addAttribute("buttonEdit", "Editar relación");
+			return "guardarCientificoContribucion";
+		} catch (Exception e) {
+			redirectAttributes.addFlashAttribute("message", e.getMessage());
+		}
+		return "guardarCientificoContribucion";
+	}
+	
+	@GetMapping("/relacionesCientificoContribucion/goToDelete/{id}")
+	public String goToDelete(@PathVariable("id") int id, Model model, RedirectAttributes redirectAttributes) {
+		try {
+			RelacionCientificosContribuciones relacionCientificoContribucion = relacionRepository.findById(id).get();
+			model.addAttribute("relacionCientificoContribucion", relacionCientificoContribucion);
+			return "eliminarRelacionCientificoContribucion";
+		} catch (Exception e) {
+			redirectAttributes.addFlashAttribute("message", e.getMessage());
+		}
+		return "eliminarRelacionCientificoContribucion";
+	}
+
+	@GetMapping("/relacionesCientificoContribucion/delete/{id}")
+	public String delete(@PathVariable("id") int id, Model model, RedirectAttributes redirectAttributes) {
+		try {
+			relacionRepository.deleteById(id);
+			redirectAttributes.addFlashAttribute("message", "Relación eliminada.");
+		} catch (Exception e) {
+			redirectAttributes.addFlashAttribute("message", e.getMessage());
+		}
+		return "redirect:/relacionesCientificoContribucion";
+	}
+	/*
+	 * 
+	 * 
+	 * 
+	 * @GetMapping("/cientificos/{idCientifico}/contribuciones") public
+	 * ResponseEntity<List<Contribucion>> getAllContribucionesByIdCientifico(
+	 * 
+	 * @PathVariable(value = "idCientifico") int idCientifico) { try {
+	 * Optional<List<Contribucion>> contribuciones =
+	 * Optional.of(contribucionesRepository
+	 * .findContribucionesByCientificosId(idCientifico)); if
+	 * (contribuciones.isPresent()) { return new
+	 * ResponseEntity<>(contribuciones.get(), HttpStatus.OK); } else { return new
+	 * ResponseEntity<>(HttpStatus.NOT_FOUND);
+	 * 
+	 * } } catch (Exception e) { System.out.println(e.getMessage()); return new
+	 * ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR); } }
+	 * 
+	 * @PostMapping("/cientificos/{idCientifico}/add/contribuciones") public
+	 * ResponseEntity<Contribucion> addContribucionToCientifico(
+	 * 
+	 * @PathVariable(value = "idCientifico") int idCientifico, @RequestBody
+	 * Contribucion contribucionNueva) { try { Optional<Cientifico> cientifico =
+	 * cientificosRepository.findById(idCientifico); Optional<Contribucion>
+	 * contribucion = contribucionesRepository.findById(contribucionNueva.getId());
+	 * if (cientifico.isPresent()&&contribucion.isPresent()) {
+	 * (cientifico.get()).addContribucion(contribucion.get());
+	 * cientificosRepository.save(cientifico.get()); return new
+	 * ResponseEntity<>(contribucion.get(), HttpStatus.CREATED); } else { return new
+	 * ResponseEntity<>(HttpStatus.NOT_FOUND); } } catch (Exception e) {
+	 * System.out.println(e.getMessage()); return new ResponseEntity<>(null,
+	 * HttpStatus.INTERNAL_SERVER_ERROR); } }
+	 * 
+	 * @PostMapping(
+	 * "/cientificos/{idCientifico}/add/contribuciones/{idContribucion}") public
+	 * ResponseEntity<Contribucion> addContribucionToCientifico(
+	 * 
+	 * @PathVariable(value = "idCientifico") int idCientifico,@PathVariable(value =
+	 * "idContribucion") int idContribucion) { try { Optional<Cientifico> cientifico
+	 * = cientificosRepository.findById(idCientifico); Optional<Contribucion>
+	 * contribucion = contribucionesRepository.findById(idContribucion); if
+	 * (cientifico.isPresent()&&contribucion.isPresent()) {
+	 * (cientifico.get()).addContribucion(contribucion.get());
+	 * cientificosRepository.save(cientifico.get()); return new
+	 * ResponseEntity<>(contribucion.get(), HttpStatus.CREATED); } else { return new
+	 * ResponseEntity<>(HttpStatus.NOT_FOUND); } } catch (Exception e) {
+	 * System.out.println(e.getMessage()); return new ResponseEntity<>(null,
+	 * HttpStatus.INTERNAL_SERVER_ERROR); } }
+	 * 
+	 * @DeleteMapping(
+	 * "/cientificos/{idCientifico}/delete/contribuciones/{idContribucion}") public
+	 * ResponseEntity<HttpStatus> deleteContribucionFromCientifico(
+	 * 
+	 * @PathVariable(value = "idCientifico") int idCientifico,
+	 * 
+	 * @PathVariable(value = "idContribucion") int idContribucion) { try {
+	 * Optional<Cientifico> cientifico =
+	 * cientificosRepository.findById(idCientifico); Optional<Contribucion>
+	 * contribucion = contribucionesRepository.findById(idContribucion); if
+	 * (cientifico.isPresent() && contribucion.isPresent()) {
+	 * (cientifico.get()).removeContribucion(idContribucion);
+	 * cientificosRepository.save(cientifico.get()); return ResponseEntity.ok(null);
+	 * } else { return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	 * 
+	 * } } catch (Exception e) { System.out.println(e.getMessage()); return new
+	 * ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR); } }
+	 * 
+	 * @PutMapping(
+	 * "/cientificos/{idCientifico}/update/contribuciones/{idContribucion}/newCientifico/{newIdCientifico}/newContribucion/{newIdContribucion}")
+	 * public ResponseEntity<Contribucion> updateNodesCientificoContribucion(
+	 * 
+	 * @PathVariable(value = "idCientifico") int idCientifico,
+	 * 
+	 * @PathVariable(value = "idContribucion") int idContribucion,
+	 * 
+	 * @PathVariable(value = "newIdCientifico") int newIdCientifico,
+	 * 
+	 * @PathVariable(value = "newIdContribucion") int newIdContribucion) { try {
+	 * Optional<Cientifico> cientifico =
+	 * cientificosRepository.findById(idCientifico); Optional<Cientifico>
+	 * cientificoNodoNuevo = cientificosRepository.findById(newIdCientifico);
+	 * Optional<Contribucion> contribucion =
+	 * contribucionesRepository.findById(idContribucion); Optional<Contribucion>
+	 * contribucionNodoNuevo = contribucionesRepository.findById(newIdContribucion);
+	 * if (cientifico.isPresent() && cientificoNodoNuevo.isPresent() &&
+	 * contribucion.isPresent() && contribucionNodoNuevo.isPresent()) {
+	 * (cientifico.get()).removeContribucion(idContribucion);
+	 * cientificosRepository.save(cientifico.get());
+	 * (cientificoNodoNuevo.get()).addContribucion(contribucionNodoNuevo.get());
+	 * cientificosRepository.save(cientificoNodoNuevo.get()); return new
+	 * ResponseEntity<>(contribucionNodoNuevo.get(), HttpStatus.CREATED); } else {
+	 * return new ResponseEntity<>(HttpStatus.NOT_FOUND); } } catch (Exception e) {
+	 * System.out.println(e.getMessage()); return new
+	 * ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR); } }
+	 * 
+	 * 
+	 * 
+	 * @GetMapping("/contribuciones/{idContribucion}/cientificos") public
+	 * ResponseEntity<List<Cientifico>> getAllTagsByTutorialId(
+	 * 
+	 * @PathVariable(value = "idContribucion") Integer idContribucion) { try {
+	 * Optional<List<Cientifico>> cientificos = Optional
+	 * .of(cientificoRepository.findCientificosByContribucionesId(idContribucion));
+	 * if (cientificos.isPresent()) { return new ResponseEntity<>(cientificos.get(),
+	 * HttpStatus.OK); } else { return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+	 * 
+	 * } } catch (Exception e) { System.out.println(e.getMessage()); return new
+	 * ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR); } }
+	 */
+
+}
