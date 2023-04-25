@@ -1,0 +1,70 @@
+.card-img-top {
+    height: 400px !important;
+    object-fit: contain !important;
+}
+
+.blockquote-footer {
+    padding: 2vh 0;
+    font-size: 3vh !important;
+    text-align: center !important;
+}
+
+h5 {
+    font-size: 1.4vh !important;
+}
+
+.card-img-top {
+    background: radial-gradient(black, white);
+}
+
+.card {
+    text-align: center;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center !important;
+}
+
+#mensajePerfilCientificos,
+#mensajePerfilContribuciones {
+    display: none;
+    width: 100%;
+}
+
+#resultadoBusquedaCientificos,
+#resultadoBusquedaContribuciones {
+    display: none;
+}
+
+#nodoTextMensajeCientificos,
+#nodoTextMensajeContribuciones {
+    display: flex;
+    border-radius: 5px;
+    border-color: rgb(55, 55, 55);
+    background-color: rgb(240, 218, 213);
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+#resultadosBusquedaCientificos,
+#resultadosBusquedaContribuciones {
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    border-color: red;
+    background-color: rgb(254, 216, 207);
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .col-lg-8 {
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}

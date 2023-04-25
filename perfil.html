@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Diegopedia</title>
+    <!--==========Favicon==========-->
+    <link rel="icon" type="image/x-icon" href="assets/ims/favicon.ico">
+    <!--==========Favicon==========-->
+    <!--==========Local css resources==========-->
+    <link href="assets/css/defaultStyles.css" rel="stylesheet">
+    <link href="assets/css/addedStyles.css" rel="stylesheet">
+    <link href="assets/css/blogStylesButtonsToTopToBotResources.css" rel="stylesheet">
+    <link href="assets/css/footer.css" rel="stylesheet">
+    <link href="assets/css/buscadorSencillo.css" rel="stylesheet">
+    <link href="assets/css/animacionFondo.css" rel="stylesheet">
+    <link href="assets/css/miPerfil.css" rel="stylesheet">
+    <link href="assets/css/animacionFondoPerfil.css" rel="stylesheet">
+    <link href="assets/css/cssBusquedasPerfil.css" rel="stylesheet">
+    <link href="assets/css/modal.css" rel="stylesheet">
+    <link href="assets/css/cambiarCredenciales.css" rel="stylesheet">
+    <link href="assets/css/mostrarErrores.css" rel="stylesheet">
+    <link href="assets/css/cssBusquedas.css" rel="stylesheet">
+    <link rel="preload" as="image" href="assets/ims/carouselValores0.jpg">
+    <link rel="preload" as="image" href="assets/ims/carouselValores1.jpg">
+    <link rel="preload" as="image" href="assets/ims/carouselValores2.jpg">
+    <link rel="preload" as="image" href="assets/ims/carouselValores3.jpg">
+    <link rel="preload" as="image" href="assets/ims/carouselInicio3.png">
+    <link rel="preload" as="image" href="assets/ims/contribucionesAstrofisica.jpg">
+    <link rel="preload" as="image" href="assets/ims/contribucionesCaos.jpg">
+    <!--==========Local css resources==========-->
+    <!--==========Links bootstrap==========-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+    <!--==========Links bootstrap==========-->
+    <!--==========Local scripts==========-->
+    <script defer src="assets/js/accessResources.js"></script>
+    <script defer src="assets/js/carouselResources.js"></script>
+    <script defer src="assets/js/blogScriptsButtonsToTopToBotResources.js"></script>
+    <script defer src="assets/js/recordarSesion.js"></script>
+    <script defer src="assets/js/miPerfil.js"></script>
+    <script defer src="assets/js/eliminarUsuario.js"></script>
+    <script defer src="assets/js/cambiarCredenciales.js"></script>
+    <!--==========Local scripts==========-->
+    <!--==========Bootstrap Scripts==========-->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+        crossorigin="anonymous"></script>
+    <!--==========Bootstrap Scripts==========-->
+</head>
+
+<body class="d-flex flex-column">
+    <div id="modal" class="age-overlay container">
+        <div class="age-modal">
+            <h2>Mensaje de la web</h2>
+            <p>Se cerrará la sesión. Deberá volver a autenticarse. ¿Aceptar?</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="index.html" id="cerrarDeVerdad" class="btn btn-dark" data-dismiss="modal">Sí</a>
+                <a href="perfil.html" id="cerrarAbortar" class="btn btn-dark">No, cancelar</a>
+            </div>
+        </div>
+    </div>
+    <div id="modal2" class="age-overlay container">
+        <div class="age-modal">
+            <h2>Mensaje de la web</h2>
+            <p>Contraseña modificada</p>
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="perfil.html" id="aceptarCambios" class="btn btn-dark">Aceptar</a>
+            </div>
+        </div>
+    </div>
+    <div id="modal3" class="age-overlay container">
+        <div class="age-modal">
+            <h2>Mensaje de la web</h2>
+            <p>Se eliminará este usuario definitivamente, junto con sus favoritos. ¿Desea continuar?</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <a href="#" id="eliminarDeVerdad" class="btn btn-dark" data-dismiss="modal">Sí</a>
+                <a href="perfil.html" id="eliminarAbortar" class="btn btn-dark">No, cancelar</a>
+            </div>
+        </div>
+    </div>
+    <div id="modal4" class="age-overlay container">
+        <div class="age-modal">
+            <h2>Mensaje de la web</h2>
+            <p>Su usuario ha sido eliminado.</p>
+            <div class="d-flex justify-content-center align-items-center">
+                <a href="index.html" id="aceptarYaEliminado" class="btn btn-dark" data-dismiss="modal">Aceptar</a>
+            </div>
+        </div>
+    </div>
+    <!--==========Marcador inicio==========-->
+    <div id="inicio"></div>
+    <!--==========Marcador inicio==========-->
+    <!--==========Botones desplazamiento==========-->
+    <div id="botonesDesplazamiento">
+        <button id="myBtnToTop" title="Go to top">
+            <i id="iconToTop" class="bi bi-arrow-up-circle-fill"></i>
+        </button>
+        <button id="myBtnToBot" title="Go to Bot">
+            <i id="iconToBot" class="bi bi-arrow-down-circle-fill"></i>
+        </button>
+    </div>
+    <!--==========Botones desplazamiento==========-->
+    <!--==========Main==========-->
+    <main class="flex-shrink-0">
+        <!--==========Nav==========-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container px-5">
+                <a class="navbar-brand" href="index.html"><img src="assets/ims/logoPrincipal.png" alt="Logo diegpedia"
+                        class="logo"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul id="nodoPadreNavegadorElementos" class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="index.html#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#features">Índice</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.html#valores">Valores</a></li>
+                        <li class="nav-item"><a class="nav-link"
+                                href="index.html#buscadorCientificosSencillo">Prueba</a></li>
+                        <li class="nav-item"><a class="nav-link" href="indexBlog.html">Blog</a></li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                                id="dropdownBusqueda">Búsquedas</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownBusqueda">
+                                <a class="dropdown-item" href="cientificos.html">Científicos</a>
+                                <a class="dropdown-item" href="contribuciones.html">Contribuciones</a>
+                                <a class="dropdown-item" href="relacionesCientificoContribucion.html">Búsqueda
+                                    precisa</a>
+                            </div>
+                        </li>
+                        <li id="nodoEliminarConectado" class="nav-item"><a href="login.html" class="nav-link"><i
+                                    class="bi bi-person-circle"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--==========Nav==========-->
+        <section id="animationLogin" class="h-100 gradient-form">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-10">
+                        <div class="card rounded-3 text-black">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="text-black">¡Bienvenido a tu perfil!</h2>
+                                <a href="#" id="cambiarCredenciales"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Cambiar
+                                    credenciales de acceso</a>
+                                <a href="#" id="cientificosFavoritos"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Ver mis
+                                    científicos favoritos</a>
+                                <a href="#" id="contribucionesFavoritas"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Ver mis
+                                    contribuciones favoritas</a>
+                                <a href="#" id="masOpciones"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Más opciones</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionCambiarCredenciales" class="h-100 gradient-form">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-10">
+                        <div class="card rounded-3 text-black">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="text-black">Cambiar credenciales de acceso</h2>
+                                <div class="card-body p-5">
+                                    <form>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="oldPass" class="form-control form-control-lg"
+                                                placeholder="Escriba su antigua contraseña" required />
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label" for="oldPass">Contraseña</label>
+                                                <a id="mostrarOP" type="button"><i id="iconoOP"
+                                                        class="bi bi-eye-slash-fill"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="password" class="form-control form-control-lg"
+                                                placeholder="Escriba su nueva contraseña"
+                                                pattern="(?=^.{8,30}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$"
+                                                title="La contraseña debe tener al entre 8 y 30 caracteres, al menos un dígito o carácter especial, al menos una minúscula y al menos una mayúscula.
+                                            Puede tener otros símbolos." required />
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label" for="password">Nueva contraseña</label>
+                                                <a id="mostrarP" type="button"><i id="iconoP"
+                                                        class="bi bi-eye-slash-fill"></i></a>
+                                            </div>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="passwordR" class="form-control form-control-lg"
+                                                placeholder="Repita la contraseña"
+                                                title="Las contraseñas deben de coincidir." required />
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label" for="passwordR">Repite tu nueva
+                                                    contraseña</label>
+                                                <a id="mostrarPR" type="button"><i id="iconoPR"
+                                                        class="bi bi-eye-slash-fill"></i></a>
+                                            </div>
+                                        </div>
+                                        <div id="contenedorErrores" class="justify-content-center">
+                                            <div id="errores"
+                                                class="d-flex flex-column justify-content-center align-items-start">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <a id="buttonCambiar"
+                                                class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Cambiar
+                                                contraseña</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <a href="#" id="regresarDesdeCambiarCredenciales"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Regresar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="sectionCientificosFavoritos" class="h-100 gradient-form">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-10">
+                        <div class="card rounded-3 text-black">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="text-black">Mis científicos favoritos</h2>
+                                <div id="mensajePerfilCientificos">
+                                    <div id="nodoTextMensajeCientificos"></div>
+                                </div>
+                                <a href="cientificos.html"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Ver
+                                    científicos</a>
+                                <a href="#" id="regresarDesdeCientificosFavoritos"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Regresar</a>
+                                <section id="resultadoBusquedaCientificos">
+                                    <div class="container px-5 my-5">
+                                        <div class="row gx-5 justify-content-center">
+                                            <div class="col-lg-8 col-xl-6">
+                                                <div class="text-center">
+                                                    <h2 class="fw-bolder">Mis científicos favoritos:</h2>
+                                                    <p class="lead fw-normal text-muted mb-5"
+                                                        id="especificacionesBusquedaCientificos"></p>
+                                                    <p class="lead fw-normal text-muted mb-5"
+                                                        id="resultadosBusquedaCientificos"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row gx-5" id="referenciaCientificosBusqueda">
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionContribucionesFavoritas" class="h-100 gradient-form">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-10">
+                        <div class="card rounded-3 text-black">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="text-black">Mis contribuciones favoritas</h2>
+                                <div id="mensajePerfilContribuciones">
+                                    <div id="nodoTextMensajeContribuciones"></div>
+                                </div>
+                                <a href="contribuciones.html"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Ver
+                                    contribuciones</a>
+                                <a href="#" id="regresarDesdeContribucionesFavoritas"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Regresar</a>
+                                <section id="resultadoBusquedaContribuciones">
+                                    <div class="container px-5 my-5">
+                                        <div class="row gx-5 justify-content-center">
+                                            <div class="col-lg-8 col-xl-6">
+                                                <div class="text-center">
+                                                    <h2 class="fw-bolder">Contribuciones encontradas:</h2>
+                                                    <p class="lead fw-normal text-muted mb-5"
+                                                        id="especificacionesBusquedaContribuciones"></p>
+                                                    <p class="lead fw-normal text-muted mb-5"
+                                                        id="resultadosBusquedaContribuciones"></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="referenciaContribucionesBusqueda" class="row gx-5">
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="sectionMasOpciones" class="h-100 gradient-form">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-10">
+                        <div class="card rounded-3 text-black">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="text-black">Más opciones de configuración</h2>
+                                <a id="eliminarCuenta"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Eliminar
+                                    cuenta</a>
+                                <a href="#" id="regresarDesdeMasOpciones"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Regresar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section id="sectionEliminarCuenta" class="h-100 gradient-form">
+            <div class="container py-5 h-100">
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-10">
+                        <div class="card rounded-3 text-black">
+                            <div class="d-flex flex-column justify-content-center align-items-center h-100">
+                                <h2 class="text-black">Eliminar cuenta</h2>
+                                <p>Inicio sesión una última vez para confirmar la eliminación de la cuenta.</p>
+                                <div class="card-body p-5">
+                                    <form>
+                                        <div class="form-outline mb-4">
+                                            <input id="usuarioEliminar" class="form-control"
+                                                placeholder="Escriba su nombre de usuario" required />
+                                            <label class="form-label" for="usuario">Usuario</label>
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <input type="password" id="passwordEliminar"
+                                                class="form-control form-control-lg"
+                                                placeholder="Escriba su nueva contraseña" required />
+                                            <div class="d-flex justify-content-between">
+                                                <label class="form-label" for="password">Nueva contraseña</label>
+                                                <a id="mostrarPE" type="button"><i id="iconoPE"
+                                                        class="bi bi-eye-slash-fill"></i></a>
+                                            </div>
+                                        </div>
+                                        <div id="contenedorErroresEliminar" class="justify-content-center">
+                                            <div id="erroresEliminar"
+                                                class="d-flex flex-column justify-content-center align-items-start">
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-center">
+                                            <a id="eliminar"
+                                                class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Eliminar</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <a href="perfil.html" id="regresarDesdeEliminarCuenta"
+                                    class="btn btn-dark btn-block btn-lg gradient-custom-4 text-white">Regresar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+    <!--==========Footer==========-->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="bg-dark py-4 mt-auto">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="d-flex flex-column justify-content-between">
+                                <a href="index.html"><img src="assets/ims/logoPrincipal.png" alt="Logo Diegopedia"
+                                        id="logoFooter"></a>
+                                <p>
+                                    <strong>Sobre el centro: </strong><a
+                                        href="https://www.thebridge.tech/financiacion-becas/becas-accenture-fundacion-universia"><img
+                                            src="assets/ims/logoTheBridge.png" class="logoBridge"
+                                            alt="Logo de TheBridge"></a>.
+                                </p>
+                                <p>
+                                    <strong>Sobre el autor: </strong><a href="indexBlog.html">Blog personal</a>
+                                </p>
+                                <div class="social-links mt-3">
+                                    <a href="https://twitter.com/?lang=es" class="twitter"><i
+                                            class="bi bi-twitter"></i></a>
+                                    <a href="https://es-es.facebook.com/" class="facebook"><i
+                                            class="bi bi-facebook"></i></a>
+                                    <a href="https://www.instagram.com/" class="instagram"><i
+                                            class="bi bi-instagram"></i></a>
+                                    <a href="https://www.skype.com/es/" class="google-plus"><i
+                                            class="bi bi-skype"></i></a>
+                                    <a href="https://es.linkedin.com/?src=go-pa&trk=sem-ga_campid.18146679037_asid.140850334975_crid.619061882347_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9047045&mcid=6968657504633266178&cid=&gclid=Cj0KCQjwxYOiBhC9ARIsANiEIfapvIqq-75jrjPIxEt6Ob3tzOyw96mTtEp2-ZbAzScptfj7y-lxEhsaAnWJEALw_wcB&gclsrc=aw.ds"
+                                        class="linkedin"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <div class="d-flex flex-column justify-content-between"></div>
+                            <h4>Enlaces</h4>
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <a href="index.html#inicio">Inicio</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a href="index.html#features">Índice</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a href="index.html#valores">Valores</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a
+                                        href="index.html#buscadorCientificosSencillo">Prueba</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <div class="d-flex flex-column justify-content-between"></div>
+                            <h4>Búsqueda de prueba</h4>
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <a id="siClickTodos" href="#clickTodos">Ver
+                                        científicos</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a id="siClickGeometras"
+                                        href="index.html#clickGeometras">Ver geómetras</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a id="siClickCosmologos"
+                                        href="index.html#clickCosmologos">Ver cosmólogos</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a id="siClickAnalistas"
+                                        href="index.html#clickAnalistas">Ver analistas</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a id="siClickTeoricos"
+                                        href="index.html#clickTeoricos">Ver teóricos</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-links">
+                            <div class="d-flex flex-column justify-content-between"></div>
+                            <h4>Búsquedas</h4>
+                            <ul>
+                                <li><i class="bi bi-chevron-right"></i> <a href="cientificos.html">Sobre
+                                        científicos</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a href="contribuciones.html">Sobre
+                                        contribuciones</a></li>
+                                <li><i class="bi bi-chevron-right"></i> <a
+                                        href="relacionesCientificoContribucion.html">Relaciones entre científicos y
+                                        contribuciones</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Diegopedia</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="indexBlog.html">Diego</a>
+            </div>
+        </div>
+    </footer>
+    <!--==========Footer==========-->
+</body>
+
+</html>

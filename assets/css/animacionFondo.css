@@ -1,0 +1,47 @@
+#animationLogin {
+    -webkit-animation: changeBack 30s infinite !important;
+    animation: changeBack 30s infinite !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: url("../ims/carouselInicio3.png") no-repeat -9999px -9999px
+     url("../ims/carouselValores1.jpg") no-repeat -9999px -9999px
+     url("../ims/carouselValores0.jpg") no-repeat -9999px -9999px
+     url("../ims/carouselValores2.jpg") no-repeat -9999px -9999px
+     url("../ims/carouselValores3.jpg") no-repeat -9999px -9999px
+     url("../ims/contribucionesAstrofisica.jpg") no-repeat -9999px -9999px
+     url("../ims/contribucionesCaos.jpg") no-repeat -9999px -9999px;
+}
+
+@keyframes changeBack {
+    0% {
+        background-image: url("../ims/carouselInicio3.png");
+    }
+
+    15% {
+        background-image: url("../ims/carouselValores1.jpg");
+    }
+
+    30% {
+        background-image: url("../ims/carouselValores0.jpg");
+    }
+
+    45% {
+        background-image: url("../ims/carouselValores2.jpg");
+    }
+
+    60% {
+        background-image: url("../ims/carouselValores3.jpg");
+    }
+
+    75% {
+        background-image: url("../ims/contribucionesAstrofisica.jpg");
+    }
+
+    90% {
+        background-image: url("../ims/contribucionesCaos.jpg");
+    }
+
+    100% {
+        background-image: url("../ims/carouselInicio3.png");
+    }
+}
