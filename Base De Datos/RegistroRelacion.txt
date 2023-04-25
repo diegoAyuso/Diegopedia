@@ -1,0 +1,175 @@
+	findByNombre				FindByApellidos		Año	Aportación
+1. 	Función Exponencial			Euler			1730	Definición
+2.	Ecuaciones de Euler-Lagrange		Euler			1750	Método
+3.	Ecuaciones de Euler-Lagrange		Lagrange		1787	Método
+4.	Teorema de Euler			Euler			1736	Teorema
+5.	Teorema de Rotación de Euler		Euler			1775	Teorema
+6.	Teorema geométrico de Euler		Euler			1767	Teorema
+7.	Conjetura de Euler			Euler			1769	Conjetura
+8.	Función gamma de Euler			Euler			1729	Definición
+9.	Constante  de Euler-Mascheroni		Euler			1769	Definición
+10.	Circunferencia de los nueve puntos	Euler			1765	Teorema
+11.	Funciones trascendentes			Euler			1737	Definición
+12.	Pequeño teorema de Fermat		Euler			1736	Demostración
+13.	Pequeño teorema de Fermat		Fermat			1636	Teorema
+14.	Pequeño teorema de Fermat		Leibniz			1683	Demostración
+15.	Pequeño teorema de Fermat		Gauss			1801	Demostración
+16.	Problema de Basilea			Euler			1735	Método
+17.	Teorema de Fermat sobre la suma de dos cuadrados	Euler	1775	Teorema
+18.	Teorema de Fermat sobre la suma de dos cuadrados	Fermat 	1640	Teorema
+19.	Teorema de Fermat sobre la suma de dos cuadrados	Lagrange	1775	Teorema
+20.	Teorema de Fermat sobre la suma de dos cuadrados	Gauss 		1798	Teorema
+21.	Teorema de los cuatro cuadrados		Euler			1749	Teorema
+22.	Teorema de los cuatro cuadrados		Lagrange		1770	Teorema
+23.	Teorema de los cuatro cuadrados		Legendre		1797	Teorema
+24.	Teorema de los números primos		Euler			1739	Teorema
+25.	Teorema de los números primos		Gauss			1792	Conjetura
+26.	Teorema de los números primos		Legendre		1798	Conjetura
+27.	Problema de los puentes de Königsberg	Euler			1736	Solución
+28.	Zeta de Riemann				Euler			1737	Definición
+29.	Zeta de Riemann				Riemann			1850	Definición
+30.	Teorema de Euler para poliedros		Euler			1750	Teorema
+31.	Recta de Euler				Euler			1765	Definición
+32.	Fórmula de Euler			Euler			1748	Teorema
+33.	Fórmula de Euler			Goldbach		1750	Método
+34.	Constante de Landau-Ramanujan		Ramanujan		1913	Definición
+35.	Identidades de Rogers-Ramanujan		Ramanujan		1913	Definición
+37.	Ecuación de Ramanujan-Nagell		Ramanujan		1913	Definición
+38.	Número primo de Ramanujan		Ramanujan		1919	Definición
+39. 	Sumatorio de Ramanujan			Ramanujan		1913	Definición
+40.	Grafo de Ramanujan			Ramanujan		1910	Definición
+41.	Forma cuadrática ternaria de Ramanujan	Ramanujan		1916	Definición
+42.	Conjetura de Goldbach			Goldbach		1742	Definición
+43.	Teorema de Noether			Noether			1916	Teorema
+44.	Ley de Gauss				Gauss			1835	Ley
+45.	Teorema de Gauss-Bonnet			Gauss			1848	Teorema
+46.	Cuadratura de Gauss			Gauss			1815	Método
+47.	Teorema fundamental del álgebra		Gauss			1816	Teorema
+48.	Teorema fundamental de la aritmética	Gauss			1798	Teorema
+49.	Cosmología cíclica conforme		Penrose			2010	Modelo
+50.	Hipótesis de censura cósmica		Penrose			1969	Hipótesis
+51.	Teorema de singularidad 		Penrose			1965	Teorema
+52.	Teorema de singularidad de Penrose-Hawking	Penrose		1970	Teorema
+53. 	Teorema de singularidad de Penrose-Hawking	Hawking		1970	Teorema
+54. 	Espiral de Fermat			Fermat			1636	Definición
+55.	Números amigos				Fermat			1636	Definición
+57.	Principio de Fermat			Fermat			1662	Principio
+58.	Principio de mínima acción		Leibniz			1745	Principio
+59.	Serie de Leibniz			Leibniz			1740	Teoría
+60.	Último teorema de Fermat		Fermat			1636	Teorema
+61.	Problema Isoperimétrico			Euler			1750	Método
+62.	Problema Isoperimétrico			Lagrange		1767	Método
+63. 	Cálculo de variaciones			Euler			1733	Teorema
+64.	Problema de n-cuerpos			Lagrange		1767	Método
+65.	Problema de n-cuerpos			Euler			1772	Método
+66.	Problema de n-cuerpos			Newton			1687	Método
+67.	Problema de n-cuerpos			Poincaré		1889	Solución
+68.	Puntos de Lagrange			Lagrange		1772	Definición
+69.	Polinomio de Lagrange			Lagrange		1795	Método
+71.	Multiplicadores de Lagrange		Lagrange 		1771	Método
+72.	Teorema de Lagrange			Lagrange		1771	Teorema
+73.	Geometría de Riemann			Riemann			1854	Teoría
+74.	Superficie de Riemann			Riemann			1850	Definición
+75.	Integral de Riemann			Riemann			1854	Definición
+76.	Función Zeta				Riemann			1859	Definición
+77. 	Variedad de Riemann			Riemann			1854	Definición
+78.	Tensor métrico				Riemann			1862	Definición
+79.	Lema de Riemann-Lebesgue		Riemann			1854	Lema
+80. 	Último teorema de Fermat		Legendre		1825	Demonstración
+81.	Ley de reciprocidad cuadrática		Legendre		1798	Teorema
+82.	Ley de reciprocidad cuadrática		Gauss			1795	Teorema
+83.	Teorema de los números primos		Legendre		1808	Teorema
+84.	Polinomios de Legendre			Legendre		1785	Definición
+85.	Teorema del núcleo de Schwartz		Schwartz		1950	Demostración
+86.	Teorema del núcleo de Schwartz		Grothendiech		1952	Teorema
+87.	Grupo de Grothendiech			Grothendiech		1964	Definición
+88.	Teoría de distribuciones		Schwartz		1949	Definición
+89.	Espacio de Schwartz			Schwartz		1973	Definición
+90.	Probabilidades cilíndricas		Schwartz		1973	Modelo
+91.	Teoría de clasificación			Shelah			1980	Teoría
+92.	Teoría PCF				Shelah			1978	Teoría
+93.	Último teorema de FErmat		Wiles			1995	Demostración
+94.	Conjetura de Poincaré			Poincaré		1904	Modelo
+95.	Conjetura de Poincaré			Perelmán		2006	Demostración
+96. 	Problema de los tres cuerpos		Poincaré 		1889	Método
+97.	Teoría de la relatividad		Einstein		1904	Teoría
+98.	Teoría de Poincaré-Hopf			Hopz			1926	Teorema
+99. 	Teoría de Poincaré-Hopf			Poincaré		1904	Modelo
+100.	Eslabón de Hopf				Hopf			1931	Definición
+101.	Fibración de Hopf			Hopf			1931	Método
+102.	Dualidad de Poincaré			Poincaré		1893	Teorema
+103.	Teorema de Poincaré-Birkhoff-Witt	Witt			1937	Teorema
+104.	Número de rotación			Poincaré		1885	Teorema
+105.	Atractor de Lorentz			Lorentz			1963	Modelo
+106.	Teoría del caos				Poincaré		1903	Teoría
+107.	Esfera-Mundo				Poincaré		1952	Modelo
+108.	Átomo primitivo				Lemaître		1931	Modelo
+109.	Cálculo de neutros rápidos sobre fisión	Oppenheimer		1942	Método
+110.	Límite de Tolman-Oppenheimer-Volkoff	Oppenheimer		1939	Definición
+111.	Límite de Chandrasekhar			Chandrasekhar		1930	Definición
+112.	Aproximación de Born-Oppenheimer	Oppenheimer		1950	Modelo
+113.	Radiación de Hawking			Hawking			1976	Teoría
+114.	Teoría del Big Bang			Hawking			1992	Teoría
+115.	Teoremas de incompletitud de Gödel	Gödel			1931	Teorema
+116.	Numeración de Gödel			Gödel			1931	Definición
+117.	Universo constructible			Gödel			1938	Gödel
+118.	Teoría de Kaluza-Klein			Kaluza			1926	Teoría
+119.	Teoría de Kaluza-Klein			Klein			1926	Teoría
+120.	Ecuación de Klein-Gordon		Klein			1926	Toería
+121.	Entropía de horizontes			Hawking			1971	Teorema
+122.	Desigualdad triangular			Minkowski		1870	Teorema
+123.	Teorema de Minkowski			Minkowski		1889	Teorema
+124. 	Dimensión de Minkowski-Bouligand	Minkowski		1880	Método
+125.	Suma de Minkowski			Minkowski		1882	Definición
+126.	Métrica de Minkowski			Minkowski		1907	Método
+127.	Equilibrio de Nash			Nash			1951	Teoría
+128. 	Teoría de Galois			Galois			1832	Teoría
+129.	Principio de Fisher			Fisher			1955	Teorema
+130.	Teorema de valores extremos		Fisher			1928	Teorema
+131.	Primera Ley de Kepler			Kepler			1609	Ley
+132.	Segunda Ley de Kepler			Kepler			1609	Ley
+133.	Tercera Ley de Kepler			Kepler			1619	Ley
+134.	Leyes de la dinámica			Newton			1687	Ley
+135.	Gravitación Universal			Newton			1687	Ley
+136.	Teoría corpuscular de la luz		Newton			1704	Teoría
+137.	Teorema del binomio 			Newton			1665	Teorema
+138.	Ecuaciones de Maxwell			Maxwell			1864	Modelo
+139.	Concepción de luz como onda		Maxwell			1864	Paradigma
+140.	Teoría del control			Maxwell			1864	Paradigma
+141.	Ley de Ohm				Ohm			1827	Ley
+143.	Radio de Schwarzschild			Schwarzschild		1916	Ecuación
+144.	Métrica de Schwarzschild		Schwarzschild		1916	Método
+145.	Transformadas de Lorentz		Lorentz			1904	Modelo
+146.	Ecuación de Dirac			Dirac			1928	Ecuación
+147.	Delta de Dirac				Dirac			1930	Definición
+148.	Estadística de Fermi-Dirac		Dirac			1926	Método
+149.	Fermión de Dirac			Dirac			1926	Definición
+150.	Fuerza de Abragan-Lorentz-Dirac		Dirac			1938	Ecuación
+151.	Fuerza de Abragan-Lorentz-Dirac		Lorentz			1938	Ecuación
+152.	Mar de Dirac				Dirac			1930	Teoría	
+153.	Hipótesis de los grandes números	Dirac			1937	Paradigma
+154.	Efecto Kapitsa-Dirac			Dirac			1933	Definición
+155.	Ecuación de Schrödinger			Schrödinger		1925	Ecuación
+156.	Gato de Schrödinger			Schrödinger		1935	Paradigma
+157.	Modelo atómico de Schrödinger		Shcrödinger		1926	Modelo	
+158.	Teoría de cuantos de luz		Einstein		1905	Teoría
+159.	Movimiento browniano			Einstein		1905	Solución
+160.	Relatividad especial			Einstein		1915	Teoría
+161.	Equivalencia masa-energía		Einstein		1915	Ecuación
+162.	Relatividad general			Einstein		1915	Paradigma
+163.	Estadística de Bose-Einstein		Einstein		1924	Modelo
+164.	Teoría de combinación de observaciones 	Gauss			1823	Definición
+165.	Teorema Egregium			Gauss			1828	Teorema
+166.	Método de eliminación de Gauss-Jordan	Jordan			1873	Método
+167.	Método de eliminación de Gauss-Jordan	Gauss			1829	Método
+168. 	Teorema de la divergencia		Gauss			1835	Teorema
+169.	Curvatura gaussiana			Gauss			1801	Solución
+170.	Lema de Gauss-Riemann			Gauss			1827	Lema
+171.	Lema de Gauss-Riemann			Riemann			1854	Lema
+172.	Inecuación de Gauss			Gauss			1823	Teorema
+173.	Característica de Euler-Poincaré		Euler			1750	Teorema
+174.	Característica de Euler-Poincaré		Poincaré		1893	Proposición
+175.	Dualidad de Poincaré			Poincaré		1893	Teorema
+
+
+

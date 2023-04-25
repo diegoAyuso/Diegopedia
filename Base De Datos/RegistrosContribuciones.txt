@@ -1,0 +1,145 @@
+1. Función Exponencial Matemáticas Análisis https://es.wikipedia.org/wiki/Funci%C3%B3n_exponencial
+2. Ecuaciones de Euler-Lagrange Matemáticas Cálculo https://es.wikipedia.org/wiki/Ecuaciones_de_Euler-Lagrange
+3. Teorema de Euler Matemáticas Teoría de números https://es.wikipedia.org/wiki/Teorema_de_Euler
+4. Teorema de Rotación de Euler Matemáticas Geometría https://es.wikipedia.org/wiki/Teorema_de_rotaci%C3%B3n_de_Euler
+5. Teorema geométrico de Euler Matemáticas  Geometría  https://es.wikipedia.org/wiki/Teorema_geom%C3%A9trico_de_Euler
+6. Conjetura de Euler Matemáticas Teoría de números https://es.wikipedia.org/wiki/Conjetura_de_Euler
+7. Función gamma de Euler Matemáticas Análisis https://es.wikipedia.org/wiki/Funci%C3%B3n_gamma
+8. Constante de Euler-Mascheroni Matemáticas Teoría de números https://es.wikipedia.org/wiki/Constante_de_Euler-Mascheroni
+9. Circunferencia de los nueve puntos Matemáticas Geometría https://es.wikipedia.org/wiki/Circunferencia_de_los_nueve_puntos
+10. Funciones Trascendentes Matemáticas Análisis https://es.wikipedia.org/wiki/Funci%C3%B3n_trascendente
+11. Pequeño teorema de Fermat Matemáticas Teoría de números https://es.wikipedia.org/wiki/Peque%C3%B1o_teorema_de_Fermat
+12. Problema de basilea Matemáticas Teoría de Números https://es.wikipedia.org/wiki/Problema_de_Basilea
+13. Teorema de Fermat sobre la suma de dos cuadrados Matemáticas Teoría de números https://es.wikipedia.org/wiki/Teorema_de_Fermat_sobre_la_suma_de_dos_cuadrados
+14. Teorema de los cuatro cuadrados Matemáticas Teoría de números https://es.wikipedia.org/wiki/Teorema_de_los_cuatro_cuadrados
+15. Teorema de los números primos Matemáticas  Teoría de números https://es.wikipedia.org/wiki/Teorema_de_los_n%C3%BAmeros_primos 
+16. Problema de los puentes de Königsberg Matemáticas Geometría https://es.wikipedia.org/wiki/Problema_de_los_puentes_de_K%C3%B6nigsberg
+17. Zeta de Riemann Matemáticas Teoría de números https://es.wikipedia.org/wiki/Funci%C3%B3n_zeta_de_Riemann
+18. Teorema de Euler para poliedros Matemáticas Geometría https://es.wikipedia.org/wiki/Teorema_de_Euler_para_poliedros
+19. Recta de Euler Matemáticas Geometría https://es.wikipedia.org/wiki/Recta_de_Euler
+20. Fórmula de Euler Matemáticas Análisis https://es.wikipedia.org/wiki/F%C3%B3rmula_de_Euler#:~:text=Euler%20desarroll%C3%B3%20la%20f%C3%B3rmula%20utilizando,in%20analysin%20infinitorum%20en%20
+21. Constante de Landau-Ramanujan Matemáticas Teoría de números https://es.wikipedia.org/wiki/Constante_de_Landau-Ramanujan
+22. Identidades de Rogers-Ramanuman Matemáticas Análisis https://es.wikipedia.org/wiki/Identidades_de_Rogers-Ramanujan
+23. Ecuación de Ramanujan-Nagell Matemáticas Teoría de números https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_Ramanujan%E2%80%93Nagell
+24. Número primo de Ramanujan Matemáticas Teoría de números https://es.wikipedia.org/wiki/N%C3%BAmero_primo_de_Ramanujan
+25. Sumatorio de Ramanujan Matemáticas Teoría de números https://es.wikipedia.org/wiki/Sumatorio_de_Ramanujan
+26. Grafo de Ramanujan Matemáticas Geometría https://es.wikipedia.org/wiki/Grafo_de_Ramanujan
+27. Forma cuadrática ternaria de Ramanujan Matemáticas Teoría de números https://es.wikipedia.org/wiki/Forma_cuadr%C3%A1tica_ternaria_de_Ramanujan
+28. Conjetura de Goldbach Matemáticas Teoría de números https://es.wikipedia.org/wiki/Conjetura_de_Goldbach
+29. Teorema de Noether Física Mecánica Teórica https://es.wikipedia.org/wiki/Teorema_de_Noether
+30. Ley de Gauss Física Electromagnetismo https://es.wikipedia.org/wiki/Ley_de_Gauss
+31. Teorema de Gauss-Bonnet Matemáticas Geometría https://es.wikipedia.org/wiki/Teorema_de_Gauss-Bonnet#:~:text=Se%20nombra%20por%20Carl%20Friedrich,un%20caso%20especial%20en%20
+32. Cuadratura de Gauss Matemáticas Análisis https://es.wikipedia.org/wiki/Cuadratura_de_Gauss
+33. Teorema fundamental del álgebra Matemáticas Álgebra https://es.wikipedia.org/wiki/Teorema_fundamental_del_%C3%A1lgebra
+34. Teorema fundamental de la aritmética Matemáticas Teoría de números https://es.wikipedia.org/wiki/Teorema_fundamental_de_la_aritm%C3%A9tica
+35. Cosmología cíclica conforme Física Cosmología https://es.wikipedia.org/wiki/Cosmolog%C3%ADa_c%C3%ADclica_conforme
+36. Hipótesis de censura cósmica Física Cosmología https://es.wikipedia.org/wiki/Hip%C3%B3tesis_de_censura_c%C3%B3smica
+37. Teorema de singularidad Física Cosmología https://francis.naukas.com/2020/10/12/el-teorema-de-singularidad-de-penrose-de-1965/
+38. Teorema de singularidad de Penrose-Hawking Física Cosmología https://es.wikipedia.org/wiki/Singularidad_gravitacional
+39. Espiral de Fermat Matemáticas Geometría https://es.wikipedia.org/wiki/Pierre_de_Fermat#Espiral_de_Fermat
+40. Números amigos Matemáticas Teoría de números https://es.wikipedia.org/wiki/Pierre_de_Fermat#N%C3%BAmeros_amigos
+41. Teorema sobre la suma de dos cuadrados Matemáticas Teoría de números https://es.wikipedia.org/wiki/Pierre_de_Fermat#Teorema_sobre_la_suma_de_dos_cuadrados
+42. Pequeño teorema de Fermat Matemáticas Teoría de números https://es.wikipedia.org/wiki/Pierre_de_Fermat#Peque%C3%B1o_teorema_de_Fermat
+43. Principio de Fermat Física Óptica https://es.wikipedia.org/wiki/Principio_de_Fermat
+44. Principio de mínima acción Física Mecánica https://es.wikipedia.org/wiki/Principio_de_m%C3%ADnima_acci%C3%B3n
+45. Serie de Leibniz Matemáticas Teoría de números https://es.wikipedia.org/wiki/Serie_de_Leibniz
+46. Último teorema de Fermat Matemáticas Teoría de números https://es.wikipedia.org/wiki/Pierre_de_Fermat#%C3%9Altimo_teorema_de_Fermat
+47. Problema Isoperimétrico Matemáticas Geometría https://es.wikipedia.org/wiki/Isoperimetr%C3%ADa
+48. Cálculo de variaciones Matemáticas Cálculo https://es.wikipedia.org/wiki/C%C3%A1lculo_de_variaciones
+49. Problema de n-cuerpos Física Dinámica https://es.wikipedia.org/wiki/Problema_de_los_n_cuerpos
+50, Puntos de Lagrange Física Dinámica https://es.wikipedia.org/wiki/Puntos_de_Lagrange
+51. Polinomio de Lagrange Matemáticas Análisis https://es.wikipedia.org/wiki/Interpolaci%C3%B3n_polin%C3%B3mica_de_Lagrange
+52. Multiplicadores de Lagrange Matemáticas Análisis https://es.wikipedia.org/wiki/Multiplicadores_de_Lagrange
+53. Teorema de Lagrange Matemáticas Teoría de grupos https://es.wikipedia.org/wiki/Teorema_de_Lagrange_(teor%C3%ADa_de_grupos)
+54. Geometría de Riemann Matemáticas Geometría https://es.wikipedia.org/wiki/Geometr%C3%ADa_de_Riemann
+55. Superficie de Riemann Matemáticas Geometría https://es.wikipedia.org/wiki/Superficie_de_Riemann
+56. Integral de Riemann Matemáticas Análisis https://es.wikipedia.org/wiki/Integral_de_Riemann
+57. Función Zeta Matemáticas Teoría de números https://es.wikipedia.org/wiki/Funci%C3%B3n_zeta_de_Riemann
+58. Variedad de Riemann Matemáticas Geometría https://es.wikipedia.org/wiki/Variedad_de_Riemann
+59. Tensor métrico Matemáticas Geometría https://es.wikipedia.org/wiki/Tensor_m%C3%A9trico
+60. Lema de Riemann-Lebesgue Matemáticas Análisis https://es.wikipedia.org/wiki/Lema_de_Riemann-Lebesgue
+61. Último teorema de Fermat Matemáticas Aritmética https://es.wikipedia.org/wiki/%C3%9Altimo_teorema_de_Fermat
+62. Ley de reciprocidad cuadrática Matemáticas Teoría de números https://es.wikipedia.org/wiki/Ley_de_reciprocidad_cuadr%C3%A1tica
+63. Polinomios de Legendre Matemáticas Análisis https://es.wikipedia.org/wiki/Polinomios_de_Legendre
+64. Teorema del núcleo de Schwartz Matemáticas Análisis https://hmong.es/wiki/Schwartz_kernel_theorem
+65. Grupo de grothendiech Matemáticas Geometría https://dialnet.unirioja.es/descarga/articulo/6171163.pdf
+66. Teoría de distribuciones Matemáticas Análisis https://es.wikipedia.org/wiki/Teor%C3%ADa_de_distribuciones
+67. Espacio de Schwartz Matemáticas Análisis https://es.wikipedia.org/wiki/Espacio_de_Schwartz
+68. Probabilidades cilíndricas Matemáticas Geometría https://rac.es/ficheros/doc/01208.pdf
+69. Teoría de clasificación Matemáticas Álgebra https://revistas.unal.edu.co/index.php/bolma/article/download/18233/19140/58969
+70. Teoría PCF Matemáticas Teoría de conjuntos https://en.wikipedia.org/wiki/PCF_theory
+71. Conjetura de Poincaré  Matemáticas Topología https://es.wikipedia.org/wiki/Hip%C3%B3tesis_de_Poincar%C3%A9
+72. Problema de los tres cuerpos Física Dinámica https://es.wikipedia.org/wiki/Problema_de_los_tres_cuerpos
+73. Teoría de la relatividad Física Relatividad https://es.wikipedia.org/wiki/Teor%C3%ADa_de_la_relatividad_especial
+74. Teorema de Poincaré-Hopf Matemáticas Topología https://en.wikipedia.org/wiki/Poincar%C3%A9%E2%80%93Hopf_theorem
+75. Eslabón de hopf Matemáticas Teoría de nudos https://es.wikipedia.org/wiki/Eslab%C3%B3n_de_Hopf
+76. Fibración de Hopf Matemáticas Topología https://es.wikipedia.org/wiki/Fibraci%C3%B3n_de_Hopf
+77. Dualidad de Poincaré Matemáticas Geometría https://es.wikipedia.org/wiki/Dualidad_de_Poincar%C3%A9
+78. Teorema de Poincaré-Birkhoff-Witt Matemáticas Álgebra https://en.wikipedia.org/wiki/Poincar%C3%A9%E2%80%93Birkhoff%E2%80%93Witt_theorem
+79. Número de rotación Física Dinámica https://en.wikipedia.org/wiki/Rotation_number
+80. Atractor de Lorentz  Física Dinámica https://es.wikipedia.org/wiki/Atractor_de_Lorenz
+81. Teoría del Caos Física Teoría del caos https://es.wikipedia.org/wiki/Teor%C3%ADa_del_caos#El_cuestionamiento_de_Poincar%C3%A9
+82. Esfera-Mundo Matemáticas Geometría https://en.wikipedia.org/wiki/Sphere-world
+83. Átomo primitivo Física Mecánica Cuántica https://es.wikipedia.org/wiki/Hip%C3%B3tesis_del_%C3%A1tomo_primigenio
+84. Cálculo de neutrones rápidos sobre fisión Física Física de partículas https://es.wikipedia.org/wiki/Temperatura_neutr%C3%B3nica
+85. Límite de Tolman-Oppenheimer-Volkoff Física Astrofísica https://es.wikipedia.org/wiki/L%C3%ADmite_de_Tolman-Oppenheimer-Volkoff
+86. Límite de Chandrasekhar Física Astrofísica https://es.wikipedia.org/wiki/L%C3%ADmite_de_Chandrasekhar
+87. Aproximación de Born-Oppenheimer Física Mecánica cuántica https://es.wikipedia.org/wiki/Aproximaci%C3%B3n_de_Born-Oppenheimer
+88. Radiación de Hawking Física Mecánica cuántica https://es.wikipedia.org/wiki/Radiaci%C3%B3n_de_Hawking
+89. Teoría del Big Bang Física Astrofísica https://historia.nationalgeographic.com.es/a/stephen-hawking-y-origen-universo_16059#:~:text=Hawking%20estaba%20convencido%20de%20que,una%20vez%20ha%20sido%20atrapada
+90. Teoremas de incompletitud de Gödel Matemáticas Lógica https://es.wikipedia.org/wiki/Teoremas_de_incompletitud_de_G%C3%B6del
+91. Numeración de Gödel Matemáticas Análisis https://es.wikipedia.org/wiki/Numeraci%C3%B3n_de_G%C3%B6del
+92. Universo constructible Matemáticas Teoría de conjuntos https://es.wikipedia.org/wiki/Universo_constructible
+93. Teoría de Kaluza-Klein Física Relatividad https://es.wikipedia.org/wiki/Teor%C3%ADa_de_Kaluza-Klein#Teor%C3%ADa_original_de_Kaluza-Klein
+94. Ecuación de Klein-Gordon Física Física cuántica de campos https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_Klein-Gordon
+95. Entropía de horizontes Física Cosmología https://www.muyinteresante.es/ciencia/29541.html
+96. Desigualdad triangular Matemáticas Geometría https://es.wikipedia.org/wiki/Desigualdad_triangular
+97. Teorema de Minkowski Matemáticas Teoría de conjuntos https://es.wikipedia.org/wiki/Teorema_de_Minkowski
+98. Dimensión de Minkowski-Bouligand Matemáticas Cálculo https://es.wikipedia.org/wiki/Dimensi%C3%B3n_de_Minkowski-Bouligand
+99. Suma de Minkowski Matemáticas Geometría https://es.wikipedia.org/wiki/Suma_de_Minkowski
+100. Métrica de Minkowski Matemáticas Geometría https://es.wikipedia.org/wiki/Espacio-tiempo_de_Minkowski
+101. Equilibrio de Nash Matemáticas Teoría de juegos https://es.wikipedia.org/wiki/Equilibrio_de_Nash
+102. Teoría de Galois Matemáticas Álgebra https://es.wikipedia.org/wiki/Teor%C3%ADa_de_Galois
+103. Principio de Fisher Biología Genética https://es.wikipedia.org/wiki/Principio_de_Fisher
+104. Teorema de valores extremos Matemáticas Estadística https://es.wikipedia.org/wiki/Teorema_de_Fisher-Tippett-Gnedenko
+105. Primera Ley de Kepler Física Dinámica https://es.wikipedia.org/wiki/Leyes_de_Kepler
+106. Segunda Ley de Kepler Física Dinámica https://es.wikipedia.org/wiki/Leyes_de_Kepler
+107. Tercera Ley de Kepler Física Dinámica https://es.wikipedia.org/wiki/Leyes_de_Kepler
+108. Leyes de la dinámica Física Dinámica https://es.wikipedia.org/wiki/Din%C3%A1mica
+109. Gravitación Universal Física Mécanica Clásica https://es.wikipedia.org/wiki/Ley_de_gravitaci%C3%B3n_universal
+110. Teoría corpuscular de la luz Física Óptica http://rsefalicante.umh.es/TemasLuz/Luz03.htm
+111. Teorema del binomio Matemáticas Teoría de números https://es.wikipedia.org/wiki/Teorema_del_binomio
+112. Ecuaciones de Maxwell Física Electromagnetismo http://www2.ulpgc.es/hege/almacen/download/40/40499/tema1.pdf
+113. Concepción de luz como onda Física Electromagnetismo https://es.wikipedia.org/wiki/James_Clerk_Maxwell#Legado_cient%C3%ADfico
+114. Teoría del control Ingeniería Sistemas dinámicos https://es.wikipedia.org/wiki/Teor%C3%ADa_del_control
+115. Ley de Ohm Física Electromagnetismo https://es.wikipedia.org/wiki/Georg_Simon_Ohm#Descubrimientos
+116. Experimento de Cavendish Física Cálculo https://es.wikipedia.org/wiki/Henry_Cavendish
+117, Radio de Schwarzschild Física Cosmología https://es.wikipedia.org/wiki/Radio_de_Schwarzschild
+118. Métrica de Schwarzschild Física Cosmología https://es.wikipedia.org/wiki/M%C3%A9trica_de_Schwarzschild
+119. Transformadas de Lorentz Física Relatividad https://es.wikipedia.org/wiki/Transformaci%C3%B3n_de_Lorentz
+120. Ecuación de Dirac Física Mecánica cuántica https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_Dirac
+121. Delta de Dirac Matemáticas Estadística https://es.wikipedia.org/wiki/Delta_de_Dirac
+122. Estadística de Fermi-Dirac Física Física Estadística https://es.wikipedia.org/wiki/Estad%C3%ADstica_de_Fermi-Dirac
+123. Fermión de Dirac Física Física de partículas https://es.wikipedia.org/wiki/Fermi%C3%B3n_de_Dirac
+124. Fuerza de Abraham-Lorentz-Dirac Física Electromagnetismo https://es.wikipedia.org/wiki/Fuerza_de_Abraham-Lorentz-Dirac
+125. Mar de Dirac Física Mecánica cuántica relativista https://es.wikipedia.org/wiki/Mar_de_Dirac
+126. Hipótesis de los grandes números Física Cosmología https://es.wikipedia.org/wiki/Hip%C3%B3tesis_de_los_grandes_n%C3%BAmeros_de_Dirac
+127. Efecto Kapitsa-Dirac Física Mecánica cuántica https://es.wikipedia.org/wiki/Efecto_Kapitsa-Dirac
+128. Ecuación de Schrödinger Física Mecánica cuántica https://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_Schr%C3%B6dinger
+129. Gato de Schrödinger Física Mecánica cuántica https://es.wikipedia.org/wiki/Gato_de_Schr%C3%B6dinger
+130. Modelo atómico de Schrödinger Física Mecánica cuántica https://es.wikipedia.org/wiki/Modelo_at%C3%B3mico_de_Schr%C3%B6dinger
+131. Teoría de cuantos de luz Física Mecánica cuántica htpps://es.wikipedia.org/wiki/Albert_Einstein#Los_art%C3%ADculos_de_1905
+132. Movimiento browniano Física Mecánica cuántica https://es.wikipedia.org/wiki/Albert_Einstein#Los_art%C3%ADculos_de_1905
+133. Relatividad especial Física Relatividad https://es.wikipedia.org/wiki/Albert_Einstein#Los_art%C3%ADculos_de_1905
+134. Equivalencia masa-energía Física Relatividad https://es.wikipedia.org/wiki/Albert_Einstein#Los_art%C3%ADculos_de_1905
+135. Relatividad general Física Relatividad https://es.wikipedia.org/wiki/Albert_Einstein#Los_art%C3%ADculos_de_1905
+136. Estadística de Bose-Einstein Física Mecánica cuántica https://es.wikipedia.org/wiki/Albert_Einstein#Los_art%C3%ADculos_de_1905
+137. Teoría de combinación de observaciones Matemáticas Estádistica https://es.wikipedia.org/wiki/Funci%C3%B3n_gaussiana
+138. Teorema Egregium Matemáticas Geometría https://es.wikipedia.org/wiki/Theorema_egregium#:~:text=Gauss%20formul%C3%B3%20el%20teorema%20(traducido,en%20cada%20punto%20permanece%20inalterada
+139. Método de eliminación de Gauss-Jordan Matemáticas Álgebra https://es.wikipedia.org/wiki/Eliminaci%C3%B3n_de_Gauss-Jordan
+140. Teorema de la divergencia Matemáticas Cálculo https://es.wikipedia.org/wiki/Teorema_de_la_divergencia
+141. Curvatura gaussiana Matemáticas Geometría https://es.wikipedia.org/wiki/Curvatura_de_Gauss
+142. Lema de Gauss-Riemann Matemáticas Geometría https://en.wikipedia.org/wiki/Gauss%27s_lemma_(Riemannian_geometry)
+143. Inecuación de Gauss Matemáticas Estadística https://en.wikipedia.org/wiki/Gauss%27s_inequality
+144. Característica de Euler-Poincaré Matemáticas Topología https://es.wikipedia.org/wiki/Caracter%C3%ADstica_de_Euler
+145. Dualidad de Poincaré Matemáticas Teoría de grupos	https://es.wikipedia.org/wiki/Dualidad_de_Poincar%C3%A9
